@@ -23,6 +23,7 @@ jobs:
         with:
           images: ghcr.io/ssmall/bind9
           tags: |
+            type=ref,event=branch
             type=schedule,pattern={{date 'YYYYMMDD'}}
           flavor: |
             latest=auto

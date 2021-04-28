@@ -24,7 +24,6 @@ jobs:
           images: ghcr.io/ssmall/bind9
           tags: |
             type=ref,event=branch
-            type=ref,event=branch,suffix=-{{date 'YYYYMMDD'}}
             type=schedule,pattern={{date 'YYYYMMDD'}}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
